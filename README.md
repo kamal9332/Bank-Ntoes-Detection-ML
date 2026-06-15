@@ -8,6 +8,15 @@ Business Problem — counterfeit detection as a fraud/risk-cost problem
 ## 📊 Business Problem
 Why are we doing this? Who is the stakeholder? 
 * Financial fraud costs organizations millions annually. This project aims to automate currency verification at scale to reduce operational risk and manual audit times.
+* Business Problem
+Retail banks process large volumes of physical cash through ATMs, branch counters, and cash-processing centres. Each note is scanned and a set of image-based features (extracted via wavelet transform) is generated to assess authenticity. Relying on manual visual inspection at this volume is slow and inconsistent, so an automated classifier is needed to flag suspected counterfeit notes for removal or further review before they re-enter circulation.
+This project frames banknote authentication as a binary classification problem: using four measurable features from a banknote scan, predict whether a note is genuine or forged.
+The cost of errors is asymmetric:
+
+False Negative (forged note classified genuine) → the note passes the automated check and re-enters circulation, creating direct financial loss and regulatory/audit exposure.
+False Positive (genuine note classified forged) → the note is routed to manual review, creating operational cost and delay, but no monetary loss.
+
+A missed forgery is more costly than an unnecessary manual review. The goal is therefore not simply maximum accuracy, but minimising missed forgeries while keeping the manual review rate operationally manageable.
 
 ## 🛠️ Tech Stack & Methodologies
 * **Language:** Python
