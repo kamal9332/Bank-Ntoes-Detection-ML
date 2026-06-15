@@ -1,9 +1,33 @@
 # Bank-Ntoes-Detection-ML
 counterfeit detection as a fraud/risk-cost problem
-bank-fraud-detection/
-├── README.md                 ← business-facing summary (the main deliverable)
-├── notebook/
-│   └── banknote_authentication.ipynb
-├── data/
-│   └── bank_notes.csv
-└── images/                    ← key plots exported as PNGs for README
+# [Project Title, e.g., Banknote Authentication & Fraud Preprocessing Pipeline]
+
+## 📌 Executive Summary
+Business Problem — counterfeit detection as a fraud/risk-cost problem
+
+## 📊 Business Problem
+Why are we doing this? Who is the stakeholder? 
+* Financial fraud costs organizations millions annually. This project aims to automate currency verification at scale to reduce operational risk and manual audit times.
+
+## 🛠️ Tech Stack & Methodologies
+* **Language:** Python
+* **Libraries:** pandas, scikit-learn, imbalanced-learn, matplotlib
+* **Techniques:** Exploratory Data Analysis (EDA), Principal Component Analysis (PCA), SMOTE, Naive Bayes Classification
+
+## 📈 The Approach & Pipeline
+1. **EDA & Data Profiling:** Analyzed structural features of banknotes and identified a severe class imbalance.
+2. **Preprocessing:** Handled class imbalance using SMOTE on the training data *only* to prevent data leakage. Applied PCA for feature dimensionality reduction.
+3. **Modeling:** Trained and cross-validated a Gaussian Naive Bayes classifier.
+
+## 🏆 Key Results & Business Impact
+Highlight your metrics here!
+* Achieved a **[Your F1-Score]% F1-Score** on the minority (counterfeit) class.
+* Mitigated data leakage risks, ensuring the model remains highly reliable in production environments.
+
+## 🖼️ Dashboard / Visualizations
+*(If it's a Power BI project, insert 2-3 high-quality screenshots of your dashboard pages here so they can see your design skills without downloading the file.)*
+
+## 🚀 How to Run the Project
+1. Clone the repo: `git clone <repo-url>`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the notebook in `/notebooks/`
